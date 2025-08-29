@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Cariominas F.C.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-green"></div>
+        <div class="blob blob-red"></div>
+    </div>
+
+    <div id="login-view" class="view-wrapper">
+        <div class="login-container glass-card">
+            <img src="logo.png" alt="Logo Cariominas" class="logo">
+            <h2>Acesso Restrito</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                    <input type="email" id="email" required placeholder="seuemail@exemplo.com">
+                </div>
+                <div class="input-group">
+                    <label for="password"><i class="fas fa-lock"></i> Senha</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar <i class="fas fa-arrow-right"></i></button>
+                <p id="login-error" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+    
+<div id="dashboard-view" class="hidden">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-logo-title">
+                    <img src="logo.png" alt="Logo Cariominas" class="header-logo">
+                    <h1>Painel Administrativo</h1>
+                </div>
+                <button id="logout-btn" class="btn btn-secondary"><i class="fas fa-sign-out-alt"></i> Sair</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="form-container card">
+                <h2 id="form-title"><i class="fas fa-plus-circle"></i> Adicionar Nova Notícia</h2>
+                <form id="noticia-form">
+                    <input type="hidden" id="noticia-id">
+                    <div class="input-group">
+                        <label for="titulo">Título</label>
+                        <input type="text" id="titulo" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="resumo">Resumo (Descrição)</label>
+                        <textarea id="resumo" rows="4" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="imagem">Imagens (pode selecionar várias)</label>
+                        <input type="file" id="imagem" accept="image/*" multiple>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" id="save-btn" class="btn btn-primary"><i class="fas fa-save"></i> Salvar Notícia</button>
+                        <button type="button" id="cancel-edit-btn" class="btn btn-secondary hidden"><i class="fas fa-times"></i> Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="list-container card">
+                <h2><i class="fas fa-newspaper"></i> Notícias Publicadas</h2>
+                <div id="noticias-list">
+                    </div>
+            </div>
+        </main>
+
+        <footer class="dashboard-footer">
+            <div class="footer-content">
+                <div class="footer-social-links">
+                    <a href="https://www.instagram.com/cariominasfc" target="_blank" title="Instagram do Cariominas" class="footer-social-btn instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5535988019425" target="_blank" title="WhatsApp do Cariominas" class="footer-social-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <p class="footer-credit">Desenvolvido por <a href="https://www.instagram.com/jordanlvs" target="_blank"><strong>@jordanlvs</strong><i class="fa-solid fa-circle-check"></i></a></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

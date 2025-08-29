@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícia - Cariominas F.C.</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-green"></div>
+        <div class="blob blob-red"></div>
+    </div>
+
+    <header id="header">
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="https://i.imgur.com/Jdq0NS5.png" alt="Logo Cariominas F.C.">
+                Cariominas F.C.
+            </a>
+            <ul class="menu">
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#projeto">O Projeto</a></li>
+                <li><a href="index.html#categorias">Categorias</a></li>
+                <li><a href="index.html#noticias">Notícias</a></li>
+                <li><a href="index.html#patrocinadores">Apoiadores</a></li>
+                <li><a href="index.html#contato">Inscrições</a></li>
+            </ul>
+            <a href="https://wa.me/5535988019425" target="_blank" class="btn btn-primary">Faça Parte</a>
+        </nav>
+    </header>
+
+    <main class="noticia-detalhe-wrapper">
+        <div class="container">
+             <div id="noticia-detalhe-content" class="glass-card">
+                <p style="text-align: center; font-size: 1.2rem;">Carregando notícia...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <a href="index.html" class="logo">Cariominas F.C.</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/cariominasfc" target="_blank" title="Instagram" class="social-btn instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5535988019425" target="_blank" title="WhatsApp" class="social-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-bottom">
+                 <div>
+                    <p>© 1997 - 2025 Cariominas Futebol Clube. Todos os direitos reservados.</p>
+                </div>
+                <p class="dev-credit">
+                    Desenvolvido por 
+                    <a href="https://www.instagram.com/weblv.dev" target="_blank"><strong>@WebLv</strong></a> Por 
+                    <a href="https://www.instagram.com/jordanlvs" target="_blank"><strong>Jordanlvs</strong><i class="fa-solid fa-circle-check"></i></a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="noticia.js"></script>
+
+</body>
+</html>
